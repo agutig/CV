@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>CV</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js"></script>
+
+<script>
+    let control_var = 0.01;
+    let frame = 0;
+    const raycaster = new THREE.Raycaster();
+    const pointer = new THREE.Vector2();
+    let clicked = false;
+    let first_frame = true;
+    let rotation_value_x = 0;
+    let rotation_value_y = 0;
+    let recuperation_frames = 0;
+    let recuperation_y= 0;
+    let back_to_animate = false;
+
+    function init() {
+        scene = new THREE.Scene();
+        var sceneWidth = window.innerWidth ;
+        var sceneHeight = window.innerHeight ;
+
+        var camera = new THREE.PerspectiveCamera(90, sceneWidth / sceneHeight, 0.01, 100);
+        camera.position.set(0, 0, 3);
+        camera.lookAt(scene.position);
+
+        var geometry = new THREE.BoxGeometry(1, 1, 1);
+        var wireframe = new THREE.WireframeGeometry(geometry);
+        var cube1 = new THREE.LineSegments(wireframe);
+        cube1.material.color = { r:1, g:1, b:1 };
+        cube1.material.transparent = true;
+        cube1.material.opacity = 0.5;
+        cube1.name = "cube1";
+        scene.add(cube1);
+
+        var geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
+        var wireframe = new THREE.WireframeGeometry(geometry);
+        var cube2 = new THREE.LineSegments(wireframe);
+        cube2.material.color = { r:1, g:1, b:1 };
+        cube2.material.transparent = true;
+        cube2.material.opacity = 0.5;
+        cube2.rotation.z = Math.PI/4;
+        scene.add(cube2);
+        
+        var renderer = new THREE.WebGLRenderer({
+            antialias : true
+        });
+
+        
+
+        renderer.setSize(sceneWidth, sceneHeight);
+        document.body.appendChild(renderer.domElement);
+
+        window.addEventListener( 'pointermove', onPointerMove );
+        window.addEventListener( 'mousedown',  onMouseDown );
+        window.addEventListener( 'mouseup',  onMouseUp);
+
+        animate(cube1,cube2, renderer, scene, camera);
+    }
+    
+
+    function animate(mesh1, mesh2, renderer, scene, camera) {
+
+        
+        basic_movement(mesh1,mesh2);
+        // update the picking ray with the camera and pointer position
+        raycaster.setFromCamera( pointer, camera );
+        // calculate objects intersecting the picking ray
+        let intersects = raycaster.intersectObjects( scene.children );
+        for ( let i = 0; i < intersects.length; i ++ ) {
+            if(intersects[ i ].object.name == "cube1" && clicked == true){
+
+                if (first_frame == true){
+                    first_frame = false
+                    rotation_value_x = mesh1.rotation.y;
+                    rotation_value_y = mesh1.rotation.z;
+                }
+                control_var = 0;
+                mesh1.rotation.y = rotation_value_x + pointer.x;
+                mesh1.rotation.x = rotation_value_y - pointer.y;
+            }
+        }
+
+        if (back_to_animate){
+            if(mesh1.rotation.x > 0.001){
+                mesh1.rotation.x += -0.0025; 
+            }else if (mesh1.rotation.x < -0.001){
+                mesh1.rotation.x += 0.0025; 
+            }else if (mesh1.rotation.x <= 0.001 || mesh1.rotation.x >= -0.001 ){
+                mesh1.rotation.x = 0;
+                recuperation_frames = 0;
+                back_to_animate = false;
+            }
+        }
+
+        renderer.render(scene, camera);
+        requestAnimationFrame(function() {
+            animate(mesh1,mesh2 ,renderer, scene, camera);
+        });
+    }
+    
+    function onPointerMove( event ) {
+
+        pointer.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+        pointer.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+    }
+
+    function onMouseDown( event ) {
+        clicked = true;
+    }
+
+    function onMouseUp( event ) {
+        clicked = false;
+        first_frame = true;
+        control_var = 0.01;
+        back_to_animate = true;
+        
+    }
+
+    function basic_movement(mesh1,mesh2){
+        frame += 0.02; 
+        let ascend = Math.cos(frame) /15
+        mesh1.rotation.y += control_var;
+        mesh2.rotation.x += 0.01;
+        mesh1.position.y = ascend;
+        mesh2.position.y = ascend;
+    }
+</script>
+</head>
+
+<body onload="init()">
+</body>
+
+</html>
