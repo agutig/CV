@@ -1,9 +1,32 @@
 body {background-color: rgb(0, 0, 0);}
 
+
+#header{
+    width: 100vw;
+    background-color: rgb(255, 248, 144);
+    position: sticky;
+    top: 0%;
+    left: -2%;
+    font-size: 2vh;
+}
+
+
+#logo{
+    position: relative;
+    width: 25vw;
+    height: 25vh;
+    margin-left: 2vw;
+}
+
+#main{
+    margin-top: 5vh;
+}
+
 h1{
     font-size: 80px;
     color: rgb(255, 255, 255);
-    z-index: 2;
     text-align: center;
     margin-top: -10vw;
 }
+
+

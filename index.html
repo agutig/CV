@@ -11,6 +11,11 @@
 
 <body onload="init()">
 
+    <div id="header">
+        <button>Sobre mi</button>
+        <button>Proyectos/Portfolio</button>
+        <button>Contacto</button>
+    </div>
     <div id="logo">
         <canvas id="canvas_three"></canvas>
         <script>
@@ -59,10 +64,11 @@
                 
                 var renderer = new THREE.WebGLRenderer({
                     antialias : true,
-                    canvas: canvas_three 
+                    canvas: canvas_three,
+                    alpha: true
                 });
 
-                
+                renderer.setClearColor( 0x000000, 0 );
 
                 renderer.setSize(sceneWidth, sceneHeight);
                 //document.body.appendChild(renderer.domElement);
@@ -150,7 +156,10 @@
         </script>
     </div>
     
-    <h1>Curriculum</h1>
+    <div id="main">
+        <h1>Curriculum</h1>
+    </div>
+    
 
 
 </body>
