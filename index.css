@@ -3,6 +3,7 @@ body {background-color: rgb(0, 0, 0);}
 
 #header{
     width: 100vw;
+    height: 10vh;
     background-color: rgb(255, 248, 144);
     position: sticky;
     top: 0%;
@@ -13,20 +14,39 @@ body {background-color: rgb(0, 0, 0);}
 
 #logo{
     position: relative;
-    width: 25vw;
-    height: 25vh;
-    margin-left: 2vw;
+    display:inline-block;
+    margin-left: calc((1vh - 0.25vw) *20 ) ;
+    float: left;
+}
+
+#canvas_three{
+    width: 40vw;
+    height: 30vh;
+    background-color: aquamarine;
+}
+
+#tittle{
+    position: relative;
+    display:inline-block;
+    background-color: rgba(240, 40, 4, 0.904);
+    float: left;
+    margin-left: 5vw;
 }
 
 #main{
-    margin-top: 5vh;
+    position: relative;
+    float: left;
 }
 
 h1{
+    display:inline-block;
     font-size: 80px;
     color: rgb(255, 255, 255);
     text-align: center;
-    margin-top: -10vw;
+   
 }
 
+p{
+    color: rgb(255, 255, 255);
+}
 
