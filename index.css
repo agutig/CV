@@ -16,6 +16,7 @@ body {background-color: rgb(0, 0, 0);}
     position: relative;
     margin-left: calc((1vh - 0.25vw) *20 ) ;
     float: left;
+    touch-action: none;
 }
 
 #canvas_three{
