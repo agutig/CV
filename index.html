@@ -74,8 +74,10 @@
                 //document.body.appendChild(renderer.domElement);
 
                 window.addEventListener( 'pointermove', onPointerMove );
-                window.addEventListener( 'mousedown',  onMouseDown );
-                window.addEventListener( 'mouseup',  onMouseUp);
+                window.addEventListener( 'pointerdown',  onMouseDown );
+                //window.addEventListener( 'touchstart',  onMouseDown );
+                window.addEventListener( 'pointerup',  onMouseUp);
+                //window.addEventListener( 'touchend',  onMouseUp);
 
                 animate(cube1,cube2, renderer, scene, camera);
             }

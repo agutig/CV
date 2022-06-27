@@ -78,11 +78,11 @@
                 window.addEventListener( 'mousedown',  onMouseDown );
                 window.addEventListener( 'mouseup',  onMouseUp);
 
-                animate(cube1,cube2, renderer, scene, camera);
+                animate(cube1,cube2, renderer, scene);
             }
             
 
-            function animate(mesh1, mesh2, renderer, scene, camera) {
+            function animate(mesh1, mesh2, renderer, scene) {
 
                 
                 basic_movement(mesh1,mesh2);
@@ -157,7 +157,7 @@
             }
 
             function resizeCanvasToDisplaySize() {
-                let canvas = renderer.domElement;
+                const canvas = renderer.domElement;
                 // look up the size the canvas is being displayed
                 let width = canvas.clientWidth;
                 let height = canvas.clientHeight;
