@@ -41,21 +41,23 @@ body {background-color: rgb(0, 0, 0);}
 }
 
 #main{
-    position: relative;
+    margin-left: 5vw;
     float: left;
 }
 
 .infobox{
     background-color: beige;
+    width: 110vw;
+    margin-left: 0vw;
 }
 
 .subtittle{
-    font-size: 40px;
+    font-size: 2vw;
     color: black;
 }
 
 .text{
-    font-size: 10px;
+    font-size: 1vw;
     color: black;
 }
 
