@@ -5,6 +5,7 @@
 <title>CV</title>
 <link rel="stylesheet" href="index.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js"></script>
+<script src="index.js"></script>
 
 
 </head>
@@ -16,6 +17,7 @@
         <button class="header_button">Proyectos/Portfolio</button>
         <button class="header_button">Contacto</button>
     </div>
+    
     <div id="logo">
         <canvas id="canvas_three"></canvas>
         <script>
@@ -92,7 +94,6 @@
                 // calculate objects intersecting the picking ray
                 let intersects = raycaster.intersectObjects( scene.children );
                 for ( let i = 0; i < intersects.length; i ++ ) {
-                    console.log(intersects[ i ].object.name)
                     if(intersects[ i ].object.name == "cube1" && clicked == true){
                         move_animate = true;
                         
@@ -163,15 +164,41 @@
     </div>
     
     <div id="main">
-        <p id="golden_paragraph">El perfil profesional o extracto es un párrafo breve que suele incluirse justo debajo de tus datos personales, en la parte superior del currículum. Resume con seguridad tu experiencia, objetivos y competencias. Piensa en el extracto de tu currículum como un "eslogan" extendido sobre tu trayectoria</p>
+        <p id="golden_paragraph">Mi trayectoria profesional está focalizada en el mundo de las telecomunicaciones, especialmente en la ingeniería de sistemas audiovisuales digital-analógicos además de tener inquietud y conocimientos de otras ramas relacionadas como el desarrollo de software, inteligencia artificial, redes y la modelación matemática del procesado y codificación de señales.</p>
+        
         <div class="infobox">
-            <p class="subtittle">Titulacion</p>
-            <p class="text">Ingenieria</p>
+            <button class="subtittle" value="false" id="i1" onclick="close_div('i1');">Estudios</button>
+            <div class="subinfobox" id="si1">
+                <p class="text">Ingenieria</p>
+            </div>
         </div>
 
         <div class="infobox">
-            <p class="subtittle">Idiomas</p>
-            <p class="text">Ingenieria</p>
+            <button class="subtittle" value="false" id="i2" onclick="close_div('i2');">Habilidades</button>
+            <div class="subinfobox" id="si2">
+                <p class="text">Ingenieria</p>
+            </div>
+        </div>
+
+        <div class="infobox">
+            <button class="subtittle" value="false" id="i3" onclick="close_div('i3');">Idiomas</button>
+            <div class="subinfobox" id="si3">
+                <p class="text">Ingenieria</p>
+            </div>
+        </div>
+
+        <div class="infobox">
+            <button class="subtittle" value="false" id="i4" onclick="close_div('i4');">Portfolio</button>
+            <div class="subinfobox" id="si4">
+                <p class="text">Ingenieria</p>
+            </div>
+        </div>
+
+        <div class="infobox">
+            <button class="subtittle" value="false" id="i5" onclick="close_div('i5');">Contacto</button>
+            <div class="subinfobox" id="si5">
+                <p class="text">Ingenieria</p>
+            </div>
         </div>
         
     </div>
