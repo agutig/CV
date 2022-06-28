@@ -2,13 +2,12 @@ body {background-color: rgb(0, 0, 0);}
 
 
 #header{
-    width: 110vw;
+    width: 100%;
     height: 5vh;
     background-color: rgb(180, 155, 87);
     position: sticky;
     top: 0%;
-    margin-top: -1vh;
-    margin-left: -5vw;
+    margin: auto 0;
     text-align: center;
 }
 
@@ -16,21 +15,20 @@ body {background-color: rgb(0, 0, 0);}
     vertical-align: middle;
     border-color: rgba(0, 0, 0, 0.596);
     margin-top: 1.5vh;
-    width: 15vw;
+    width: fit-content;
+    height: 5vh;
+    border-radius: 5px;
 }
 
 #logo{
-    margin-left: calc((1vh - 0.25vw) *20 ) ;
-    text-align: left;
-    width: 20%;
     touch-action: none;
-    background-color: brown;
+    width: fit-content;
+    
 
 }
 
 #canvas_three{
-    width: 40vw;
-    height: 30vh;
+    margin: auto 0;
 }
 
 #tittle{
@@ -47,9 +45,9 @@ body {background-color: rgb(0, 0, 0);}
 
 .infobox{
     background-color: rgb(180, 155, 87);
-    width: 110vw;
+    width: 100%;
     text-align: center;
-    margin-top: 1vh;
+    margin-top: 1%;
 }
 
 
@@ -74,8 +72,7 @@ body {background-color: rgb(0, 0, 0);}
 
 #golden_paragraph{
     text-align: center;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin: auto;
     font-size: 3vh;
     
    

@@ -39,8 +39,8 @@
 
             function init() {
                 scene = new THREE.Scene();
-                sceneWidth = window.innerWidth ;
-                sceneHeight = window.innerHeight/4 ;
+                sceneWidth = window.innerWidth /3 ;
+                sceneHeight = window.innerHeight /4 ;
 
                 var camera = new THREE.PerspectiveCamera(90, sceneWidth / sceneHeight, 0.01, 100);
                 camera.position.set(0, 0, 3);
@@ -63,7 +63,7 @@
                 cube2.material.opacity = 0.5;
                 cube2.rotation.z = Math.PI/4;
                 scene.add(cube2);
-
+                
                 var renderer = new THREE.WebGLRenderer({
                     antialias : true,
                     canvas: canvas_three,
@@ -132,7 +132,7 @@
             
             function onPointerMove( event ) {
 
-                pointer.x = ( ( event.clientX / sceneWidth ) * 2 - 1 );
+                pointer.x = ( event.clientX / sceneWidth ) * 2 - 1;
                 pointer.y = - ( event.clientY / sceneHeight ) * 2 + 1;
             }
 
