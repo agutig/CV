@@ -21,9 +21,9 @@ html,body {
     color: rgb(20, 21, 32);
     margin-top: 1.5vh;
     width: fit-content;
-    height: 5vh;
+    height: 5vw;
     border-radius: 5px;
-    font-size: 3vh;
+    font-size: 3vw;
 }
 
 .header_button:hover{
@@ -33,13 +33,12 @@ html,body {
 
 #logo{
     touch-action: none;
-    width: 100vw;
 
 }
 
 #canvas_three{
     margin: auto 0;
-    width: 100vw;
+    height: fit-content;
     background-color:rgba(72, 85, 50, 0);
 }
 
@@ -94,7 +93,7 @@ html,body {
     text-align: center;
     margin-left: 10vw;
     margin-right: 10vw;
-    margin-top: -3vh;
+    margin-top: calc((1vw-1wh)*3);
     font-size: 3vh;
     
    

@@ -39,8 +39,14 @@
 
             function init() {
                 scene = new THREE.Scene();
-                sceneWidth = window.innerWidth ;
-                sceneHeight = window.innerHeight/2 ;
+
+                container = document.getElementById('canvas_three');
+               
+                console.log(container.clientWidth)
+                sceneWidth  = window.innerWidth;
+                sceneHeight = container.clientWidth;
+                //sceneWidth = window.innerWidth ;
+                //sceneHeight = window.innerHeight/2 ;
 
                 var camera = new THREE.PerspectiveCamera(90, sceneWidth / sceneHeight, 0.01, 100);
                 camera.position.set(0, 0, 3);
@@ -97,7 +103,7 @@
                     scene.add(mesh);        
                 });
 
-
+               
                 var renderer = new THREE.WebGLRenderer({
                     antialias : true,
                     canvas: canvas_three,
