@@ -40,14 +40,7 @@ html,body {
 #canvas_three{
     margin: auto 0;
     width: 100%;
-    background-color:rgb(39, 70, 70);
-}
-
-#tittle{
-    margin: 0 auto;
-    margin-top: -7vh;
-    text-align: center;
-    width: fit-content;
+    background-color:rgb(72, 85, 50);
 }
 
 #main{
