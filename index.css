@@ -23,6 +23,7 @@ html,body {
     width: fit-content;
     height: 5vh;
     border-radius: 5px;
+    font-size: 3vh;
 }
 
 .header_button:hover{
