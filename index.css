@@ -43,6 +43,13 @@ html,body {
     background-color:rgb(72, 85, 50);
 }
 
+#tittle{
+    margin: 0 auto;
+    margin-top: -7vh;
+    text-align: center;
+    width: fit-content;
+}
+
 #main{
     position: relative;
     width: 100%;
