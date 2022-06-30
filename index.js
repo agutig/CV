@@ -7,12 +7,14 @@ function close_div(id){
         console.log("abierto");
         elemento.value = "true";
         document.getElementById("s"+elemento.id).style.height = "30vh";
+        document.getElementById("t"+elemento.id).style.fontSize = "1vw";
 
 
     } else{
         console.log("cerrado");
         elemento.value = "false";
-        document.getElementById("s"+elemento.id).style.height = "0px";      
+        document.getElementById("s"+elemento.id).style.height = "0px";     
+        document.getElementById("t"+elemento.id).style.fontSize = "0px"; 
 
     }   
     

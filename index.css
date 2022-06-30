@@ -1,4 +1,4 @@
-body {background-color: rgb(0, 0, 0);}
+body {background-color: rgb(31, 29, 128);}
 
 
 #header{
@@ -22,17 +22,18 @@ body {background-color: rgb(0, 0, 0);}
 
 #logo{
     touch-action: none;
-    width: fit-content;
-    
+    width: 100vw;
 
 }
 
 #canvas_three{
     margin: auto 0;
+    width: 100vw;
 }
 
 #tittle{
     margin: 0 auto;
+    margin-top: -7vh;
     text-align: center;
     width: fit-content;
 }
@@ -48,17 +49,22 @@ body {background-color: rgb(0, 0, 0);}
     width: 100%;
     text-align: center;
     margin-top: 1%;
+    height: fit-content;
 }
 
 
 .subtittle{
-    font-size: 2vw;
+    height: 8vh;
+    font-size: 4vh;
+    margin: auto;
+    width: 100%;
     color: black;
-    text-align: center;
+    background-color:  rgb(180, 155, 87);
 }
 
 .subtittle:hover{
 	opacity: .8;
+    background: rgba(255, 216, 108, 0.692);
 }
 
 .subinfobox{
@@ -72,7 +78,9 @@ body {background-color: rgb(0, 0, 0);}
 
 #golden_paragraph{
     text-align: center;
-    margin: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: -3vh;
     font-size: 3vh;
     
    
@@ -82,6 +90,7 @@ body {background-color: rgb(0, 0, 0);}
     text-align: center;
     font-size: 1vw;
     color: black;
+    font-size: 0px;
 }
 
 h1{
@@ -94,5 +103,6 @@ h1{
 
 p{
     color: rgb(255, 255, 255);
+    
 }
 
