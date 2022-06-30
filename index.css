@@ -33,13 +33,13 @@ html,body {
 
 #logo{
     touch-action: none;
-    width: 100%;
+    width: 100vw;
 
 }
 
 #canvas_three{
     margin: auto 0;
-    width: 100%;
+    width: 100vw;
     background-color:rgba(72, 85, 50, 0);
 }
 
