@@ -6,7 +6,7 @@ html,body {
 
 #header{
     width: 100%;
-    height: 5vh;
+    height: calc((2.5vh + 1vw));
     background-color: rgb(180, 155, 87);
     position: sticky;
     top: 0%;
@@ -22,7 +22,7 @@ html,body {
     margin-top: 1.5vh;
     width: fit-content;
     height: fit-content;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size:  calc((1.8vh + 1vw));
 }
 
