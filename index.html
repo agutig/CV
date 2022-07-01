@@ -94,12 +94,14 @@
                     });
                     var material = new THREE.MeshBasicMaterial()
                     material.color = new THREE.Color(0xffffff);
+                    material.transparent = true;
                     var mesh = new THREE.Mesh(geometry,material);
                     mesh.castShadow = false;
                     mesh.receiveShadow = true;
                     mesh.position.x = -22.5;
                     mesh.position.z = -5;
                     mesh.position.y = -5;
+                    mesh.name = "text";
                     scene.add(mesh);        
                 });
 
@@ -195,6 +197,12 @@
                 mesh1.position.y = ascend + 1.5;
                 mesh2.position.y = ascend +1.5;
                 scene.getObjectByName( "cube3").rotation.y += 0.001;
+                try{
+                    scene.getObjectByName( "text").position.y= ascend-5;
+                    scene.getObjectByName( "text").material.opacity = 1+ ascend*2;
+                    console.log(scene.getObjectByName( "text").material.opacity)
+                }catch(error){}
+
             }
         </script>
     </div>
@@ -205,12 +213,13 @@
     </div>
     
     <div id="main">
-        <p id="golden_paragraph">Mi trayectoria profesional está focalizada en el mundo de las telecomunicaciones, especialmente en la ingeniería de sistemas audiovisuales digital-analógicos además de tener inquietud y conocimientos de otras ramas relacionadas como el desarrollo de software, inteligencia artificial, redes y la modelación matemática del procesado y codificación de señales.</p>
+        <p id="golden_paragraph">"Todo el mundo tiene un plan hasta que le meto la primera hostia"</p>
+        <p id="golden_paragraph">Mike tyson</p>
         
         <div class="infobox">
             <button class="subtittle" value="false" id="i0" onclick="close_div('i0');">Sobre mi</button>
             <div class="subinfobox" id="si0">
-                <p class="text" id="ti0">Ingenieria</p>
+                <p class="text" id="ti0">Mi trayectoria profesional está focalizada en el mundo de las telecomunicaciones, especialmente en la ingeniería de sistemas audiovisuales digital-analógicos además de tener inquietud y conocimientos de otras ramas relacionadas como el desarrollo de software, inteligencia artificial, redes y la modelación matemática del procesado y codificación de señales.</p>
             </div>
         </div>
 

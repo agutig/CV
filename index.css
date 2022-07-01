@@ -19,11 +19,11 @@ html,body {
     vertical-align: middle;
     border-color: rgba(0, 0, 0, 0.596);
     color: rgb(20, 21, 32);
-    margin-top: 1.5vh;
+    margin-top: 0.5vh;
     width: fit-content;
     height: fit-content;
     border-radius: 8px;
-    font-size:  calc((1.8vh + 1vw));
+    font-size:  calc((1.8vh + 1vw)/1.5);
 }
 
 .header_button:hover{
@@ -93,8 +93,7 @@ html,body {
     text-align: center;
     margin-left: 10vw;
     margin-right: 10vw;
-    margin-top: calc((1vw-1wh)*3);
-    font-size: 3vh;
+    font-size:  calc((0.5vh + 1vw)*2);
     
    
 }
