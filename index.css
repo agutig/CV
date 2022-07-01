@@ -76,8 +76,7 @@ html,body {
 }
 
 .subtittle:hover{
-	opacity: .8;
-    background: rgba(255, 216, 108, 0.692);
+    background: rgb(255, 216, 108);
 }
 
 .subinfobox{
@@ -86,6 +85,7 @@ html,body {
 	background: rgb(255, 216, 108);
 	transition: height .4s;
     border-radius: 5px;
+    overflow: auto;
 
 }
 
@@ -102,7 +102,9 @@ html,body {
     text-align: center;
     font-size: 1vw;
     color: rgb(20, 21, 32);
-    font-size: 0px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+
 }
 
 h1{
@@ -116,5 +118,10 @@ h1{
 p{
     color: rgb(255, 255, 255);
     
+}
+
+#ii0{
+    float: left;
+    margin-left: 2vw;
 }
 
