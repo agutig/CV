@@ -2,6 +2,7 @@ html,body {
     background-color: rgb(20, 21, 32);
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -88,7 +89,7 @@ html,body {
 	transition: height .4s;
     border-radius: 5px;
     overflow: auto;
-
+    text-align:center;
 }
 
 #golden_paragraph{
@@ -121,6 +122,8 @@ p{
     color: rgb(255, 255, 255);
     
 }
+
+
 
 #ii0{
     float: left;

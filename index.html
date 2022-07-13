@@ -13,9 +13,9 @@
 <body onload="init()">
 
     <div id="header">
-        <button class="header_button">Sobre mi</button>
-        <button class="header_button">Proyectos/Portfolio</button>
-        <button class="header_button">Contacto</button>
+        <button class="header_button" onclick="smooth_scroll('sobre_mi')">Sobre mi</button>
+        <button class="header_button" onclick="smooth_scroll('portfolio')">Proyectos/Portfolio</button>
+        <button class="header_button" onclick="smooth_scroll('contacto')">Contacto</button>
     </div>
 
     <div id="logo">
@@ -215,7 +215,7 @@
         <p id="golden_paragraph">"Si quieres encontrar los secretos del universo, piensa en términos de energía, frecuencia y vibración."</p>
         <p id="golden_paragraph">Nikola Tesla</p>
         
-        <div class="infobox">
+        <div class="infobox" id="sobre_mi">
             <button class="subtittle" value="false" name="i0" onclick="close_div('i0');">Sobre mi</button>
             <div class="subinfobox" name="si0">
                 <img src="linkedin.png" style="height: 0px;" name="ii0">
@@ -237,10 +237,10 @@
         <div class="infobox">
             <button class="subtittle" value="false" name="i2" onclick="close_div('i2');">Habilidades</button>
             <div class="subinfobox" name="si2">
-                <ul>
+                <ul class="text" name="ti2">
                     <li class="text" name="ti2">Python</li>
                     <li class="text" name="ti2">Frontend Web(html,css,js)</li>
-                        <ul>
+                        <ul class="text" name="ti2">
                             <li class="text" name="ti2">three.js</li>
                             <li class="text" name="ti2">A-frame</li>
                         </ul>
@@ -255,24 +255,24 @@
         <div class="infobox">
             <button class="subtittle" value="false" name="i3" onclick="close_div('i3');">Idiomas</button>
             <div class="subinfobox" name="si3">
-                <ul>
+                <ul class="text" name="ti3">
                     <li class="text" name="ti3">Castellano - Nativo</li>
                     <li class="text" name="ti3">Ingles- B2</li>
                 </ul>
             </div>
         </div>
 
-        <div class="infobox">
+        <div class="infobox" id="portfolio">
             <button class="subtittle" value="false" name="i4" onclick="close_div('i4');">Portfolio</button>
             <div class="subinfobox" name="si4">
-                <ul>
+                <ul class="text" name="ti4">
                     <li class="text" name="ti4"> <a href="https://agutig.github.io/Trabajo-final-3D-WEB/"> Three js: Juego "break out" </a> </li>
                     
                 </ul>
             </div>
         </div>
 
-        <div class="infobox">
+        <div class="infobox" id="contacto">
             <button class="subtittle" value="false" name="i5" onclick="close_div('i5');">Contacto</button>
             <div class="subinfobox" name="si5">
                 <p class="text" name="ti5">Email: alvarogutierrezg99@gmail.com</p>

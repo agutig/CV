@@ -48,3 +48,7 @@ function close_div(id){
     }   
     
 }
+
+function smooth_scroll(id){
+    window.location.href = "#" + id;
+}
