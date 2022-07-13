@@ -9,7 +9,10 @@ function close_div(id){
         
         subinfo = document.getElementsByName("s"+elemento.name)
         for (let step = 0; step < subinfo.length; step++) {
-            subinfo[step].style.height = " fit-content";
+            subinfo[step].style.transition = "transition: max-height 1s";
+            subinfo[step].style.height = "fit-content";
+            subinfo[step].style.maxHeight = "100vh";
+            
         }
 
         text = document.getElementsByName("t"+elemento.name);
@@ -31,7 +34,8 @@ function close_div(id){
 
         subinfo = document.getElementsByName("s"+elemento.name)
         for (let step = 0; step < subinfo.length; step++) {
-            subinfo[step].style.height = "0px"; 
+            subinfo[step].style.maxHeight = "0px"; 
+            subinfo[step].style.height = "0px";
         }
 
         text = document.getElementsByName("t"+elemento.name);
@@ -50,5 +54,25 @@ function close_div(id){
 }
 
 function smooth_scroll(id){
+    switch(id){
+        case "sobre_mi":
+            if(document.getElementsByName('i0')[0].value == "false"){
+                close_div('i0');
+            }
+            break;
+
+        case "portfolio":
+            if(document.getElementsByName('i4')[0].value == "false"){
+                close_div('i4');
+            }
+            break;
+
+        case "contacto":
+            if(document.getElementsByName('i5')[0].value == "false"){
+                close_div('i5');
+            }
+        break;
+    }
+
     window.location.href = "#" + id;
 }
