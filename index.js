@@ -1,25 +1,49 @@
 
 function close_div(id){ 
 
-    elemento = document.getElementById(id);
+    elemento = document.getElementsByName(id)[0];
     
     if(elemento.value=="false"){
         console.log("abierto");
         elemento.value = "true";
-        document.getElementById("s"+elemento.id).style.height = " fit-content";
-        document.getElementById("t"+elemento.id).style.fontSize = "calc((0.5vh + 1vw)*1.2)";
+        
+        subinfo = document.getElementsByName("s"+elemento.name)
+        for (let step = 0; step < subinfo.length; step++) {
+            subinfo[step].style.height = " fit-content";
+        }
+
+        text = document.getElementsByName("t"+elemento.name);
+        for (let step = 0; step < text.length; step++) {
+            text[step].style.fontSize = "calc((0.5vh + 1vw)*1.2)";
+        }
+
         try{
-            document.getElementById("i"+elemento.id).style.height = "calc((0.5vh + 1vw)*20)";
+            images =  document.getElementsByName("i"+elemento.name);
+            for (let step = 0; step < text.length; step++) {
+                images[step].style.height = "calc((0.5vh + 1vw)*15)";
+            }
         }catch(error){}
 
 
     } else{
         console.log("cerrado");
         elemento.value = "false";
-        document.getElementById("s"+elemento.id).style.height = "0px";     
-        document.getElementById("t"+elemento.id).style.fontSize = "0px"; 
+
+        subinfo = document.getElementsByName("s"+elemento.name)
+        for (let step = 0; step < subinfo.length; step++) {
+            subinfo[step].style.height = "0px"; 
+        }
+
+        text = document.getElementsByName("t"+elemento.name);
+        for (let step = 0; step < text.length; step++) {
+            text[step].style.fontSize = "0px";
+        }
+
         try{
-            document.getElementById("i"+elemento.id).style.height = "0px";
+            images =  document.getElementsByName("i"+elemento.name);
+            for (let step = 0; step < text.length; step++) {
+                images[step].style.height = "0px";
+            }
         }catch(error){}
     }   
     
