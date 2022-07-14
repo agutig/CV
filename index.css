@@ -100,6 +100,20 @@ html,body {
     
 }
 
+.info_element{
+    background-color: white;
+    border-radius: 8px;
+    width: 85vw;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.5s;
+}
+
+.info_element:hover{
+    transform: scale(1.1);
+}
+
 #golden_paragraph{
     text-align: center;
     margin-left: 10vw;
@@ -139,7 +153,12 @@ li {
     transition-property: transform , opacity ;
     transition:  1.25s;
     opacity: 0;
+    
  
+}
+
+li:hover{
+    transform: scale(1.1); 
 }
 
 h1{
