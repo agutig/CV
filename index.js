@@ -27,6 +27,14 @@ function close_div(id){
             }
         }catch(error){}
 
+        try{
+            lists =  document.getElementsByName("l"+elemento.name);
+            console.log(lists);
+            for (let step = 0; step < lists.length; step++) {
+                lists[step].style.transform = "translateX(0)";
+                lists[step].style.opacity = "1";
+            }
+        }catch(error){}
 
     } else{
         console.log("cerrado");
@@ -49,6 +57,16 @@ function close_div(id){
                 images[step].style.height = "0px";
             }
         }catch(error){}
+
+        try{
+            lists =  document.getElementsByName("l"+elemento.name);
+            console.log(lists);
+            for (let step = 0; step < lists.length; step++) {
+                lists[step].style.transform = "translateX(10vw)";
+                lists[step].style.opacity = "0";
+            }
+        }catch(error){}
+
     }   
     
 }
@@ -76,3 +94,5 @@ function smooth_scroll(id){
 
     window.location.href = "#" + id;
 }
+
+
