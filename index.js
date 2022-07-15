@@ -13,11 +13,13 @@ function close_div(id){
             subinfo[step].style.height = "fit-content";
             subinfo[step].style.maxHeight = "100vh";
             
+            
         }
 
         text = document.getElementsByName("t"+elemento.name);
         for (let step = 0; step < text.length; step++) {
             text[step].style.fontSize = "calc((0.5vh + 1vw)*1.2)";
+            text[step].style.opacity = "1";
         }
 
         try{
@@ -44,11 +46,13 @@ function close_div(id){
         for (let step = 0; step < subinfo.length; step++) {
             subinfo[step].style.maxHeight = "0px"; 
             subinfo[step].style.height = "0px";
+            
         }
 
         text = document.getElementsByName("t"+elemento.name);
         for (let step = 0; step < text.length; step++) {
             text[step].style.fontSize = "0px";
+            text[step].style.opacity = "0";
         }
 
         try{
