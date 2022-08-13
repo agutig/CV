@@ -1,5 +1,5 @@
 html,body {
-    background-color: #495464;
+    background-color: #000000;
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     scroll-behavior: smooth;
@@ -9,7 +9,7 @@ html,body {
 #header{
     width: 100%;
     height: calc((2.5vh + 1vw));
-    background-color: #bbbfca;
+    background-color: #ffffff;
     position: sticky;
     top: 0%;
     margin: auto 0;
@@ -30,7 +30,7 @@ html,body {
 }
 
 .header_button:hover{
-    background: #f4f4f2;
+    background: #ffffff;
     color: rgb(20, 21, 32);
 }
 
@@ -59,7 +59,7 @@ html,body {
 }
 
 .infobox{
-    background-color: #bbbfca;
+    background-color: #ffffff;
     width: 100%;
     text-align: center;
     margin-top: 1%;
@@ -69,21 +69,57 @@ html,body {
     animation-duration: 3.25s;
 }
 
-
+/*  Botones subtitle */
+/* From uiverse.io by @Navarog21 */
 .subtittle{
-    height: 8vh;
-    font-size: 4vh;
-    margin: auto;
-    width: 100%;
-    color: rgb(20, 21, 32);
-    background-color:  #bbbfca;
-    border-radius: 5px;
-    transition: background-color 0.75s;
+    width: 100vw;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #ffffff;
+    outline: none;
+    background-color:  rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.subtittle:hover{
-    background-color: #c8c8c8;
+.subtittle::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+    transform-origin: center;
 }
+  
+.subtittle::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+  
+.subtittle:hover::before, button:hover::after {
+    transform: scale(0)
+}
+  
+.subtittle:hover {
+    box-shadow: inset 50px 50px 50px #ffffff;
+    color:  rgb(0, 0, 0);
+}
+
+/* */
+
 
 .subinfobox{
 	width: 100%;
