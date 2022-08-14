@@ -75,7 +75,7 @@ html,body {
 .subtittle{
     width: 100%;
     position: relative;
-    height: 3.5em;
+    height: 8vh;
     border: 3px solid #ffffff;
     outline: none;
     background-color:  rgb(0, 0, 0);
@@ -111,7 +111,8 @@ html,body {
 }
   
 .subtittle:hover .before, button:hover .after {
-    transform: scale(0)
+    transform: scale(0);
+    opacity: 0;
 }
   
 .subtittle:hover {
