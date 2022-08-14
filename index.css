@@ -42,7 +42,7 @@ html,body {
 #canvas_three{
     margin: auto 0;
     height: fit-content;
-    background-color:rgba(72, 85, 50, 0);
+    background-color:rgba(0, 0, 0, 0);
 }
 
 #tittle{
@@ -67,6 +67,7 @@ html,body {
     border-radius: 5px;
     animation-name: init_web;
     animation-duration: 3.25s;
+    border: 3px solid #ffffff;
 }
 
 /*  Botones subtitle */
@@ -75,7 +76,7 @@ html,body {
     width: 100vw;
     position: relative;
     height: 3.5em;
-    border: 3px ridge #ffffff;
+    border: 3px solid #ffffff;
     outline: none;
     background-color:  rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -85,7 +86,7 @@ html,body {
     font-weight: bold;
 }
 
-.subtittle::after {
+.subtittle .after {
     content: "";
     position: absolute;
     top: -10px;
@@ -97,7 +98,7 @@ html,body {
     transform-origin: center;
 }
   
-.subtittle::before {
+.subtittle .before {
     content: "";
     transform-origin: center;
     position: absolute;
@@ -109,12 +110,13 @@ html,body {
     transition: 0.5s;
 }
   
-.subtittle:hover::before, button:hover::after {
+.subtittle:hover .before, button:hover .after {
     transform: scale(0)
 }
   
 .subtittle:hover {
     box-shadow: inset 50px 50px 50px #ffffff;
+    background-color: #ffffff;
     color:  rgb(0, 0, 0);
 }
 
@@ -124,7 +126,7 @@ html,body {
 .subinfobox{
 	width: 100%;
     max-height: 0px;
-	background-color: #bbbbbc;
+	background-color: #000000;
 	transition: max-height  1s;
     border-radius: 5px;
     overflow: auto;
@@ -162,7 +164,7 @@ html,body {
 .text{
     text-align: center;
     font-size: 1vw;
-    color: rgb(20, 21, 32);
+    color: rgb(0, 0, 0);
     margin-left: 3vw;
     margin-right: 3vw;
     opacity: 0;
@@ -179,10 +181,10 @@ ul  {
 
 li {
     
-    color: rgb(20, 21, 32);
+    color: rgb(0, 0, 0);
     margin-left: 3vw;
     margin-right: 3vw;
-    background-color: #f4f4f2;
+    background-color: #ffffff;
     border-radius: 8px;
     margin-top: 1vh;
     font-size: 2.5vw;
@@ -234,11 +236,11 @@ p{
 @keyframes change_backgrounds{
 
     0%{
-        background-color: #c2d3da;
+        background-color: #000000;
     }
 
     100%{
-        background-color: #81A3A7;
+        background-color: #000000;
     }
     
 }

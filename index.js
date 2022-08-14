@@ -6,7 +6,16 @@ function close_div(id){
     if(elemento.value=="false"){
         console.log("abierto");
         elemento.value = "true";
-        
+
+        console.log(elemento)
+        /*BOTON*/
+        elemento.style.backgroundColor = "#ffffff";
+        elemento.style.color = "rgb(0,0,0)"
+        aft_bef = document.getElementsByName("butt_animation");
+        aft_bef[0].style.zIndex = -1;
+        aft_bef[1].style.zIndex = -1;
+        /* */
+
         subinfo = document.getElementsByName("s"+elemento.name)
         for (let step = 0; step < subinfo.length; step++) {
             subinfo[step].style.transition = "transition: max-height 1s";
@@ -41,6 +50,14 @@ function close_div(id){
     } else{
         console.log("cerrado");
         elemento.value = "false";
+
+        /*BOTON*/
+        elemento.style.backgroundColor = "rgb(0,0,0)";
+        elemento.style.color = "#ffffff";
+        aft_bef=document.getElementsByName("butt_animation");
+        aft_bef[0].style.zIndex = 1;
+        aft_bef[1].style.zIndex = 1;
+        /* */
 
         subinfo = document.getElementsByName("s"+elemento.name)
         for (let step = 0; step < subinfo.length; step++) {
