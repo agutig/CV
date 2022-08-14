@@ -73,7 +73,7 @@ html,body {
 /*  Botones subtitle */
 /* From uiverse.io by @Navarog21 */
 .subtittle{
-    width: 100vw;
+    width: 100%;
     position: relative;
     height: 3.5em;
     border: 3px solid #ffffff;

@@ -11,7 +11,7 @@ function close_div(id){
         /*BOTON*/
         elemento.style.backgroundColor = "#ffffff";
         elemento.style.color = "rgb(0,0,0)"
-        aft_bef = document.getElementsByName("butt_animation");
+        aft_bef = document.getElementsByName("butt_animation"+id);
         aft_bef[0].style.zIndex = -1;
         aft_bef[1].style.zIndex = -1;
         /* */
@@ -54,7 +54,7 @@ function close_div(id){
         /*BOTON*/
         elemento.style.backgroundColor = "rgb(0,0,0)";
         elemento.style.color = "#ffffff";
-        aft_bef=document.getElementsByName("butt_animation");
+        aft_bef=document.getElementsByName("butt_animation"+id);
         aft_bef[0].style.zIndex = 1;
         aft_bef[1].style.zIndex = 1;
         /* */
