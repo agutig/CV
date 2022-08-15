@@ -82,8 +82,9 @@ html,body {
     color: rgb(255, 255, 255);
     transition: 1s;
     border-radius: 0.3em;
-    font-size: 16px;
+    font-size: 3vh;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .subtittle .after {
@@ -116,7 +117,7 @@ html,body {
 }
   
 .subtittle:hover {
-    box-shadow: inset 50px 50px 50px #ffffff;
+    box-shadow: inset 50vw 50vh 50vw #ffffff;
     background-color: #ffffff;
     color:  rgb(0, 0, 0);
 }
