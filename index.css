@@ -9,19 +9,21 @@ html,body {
 #header{
     width: 100%;
     height: calc((2.5vh + 1vw));
-    background-color: #ffffff;
+    background-color: #00000000;
     position: sticky;
     top: 0%;
     margin: auto 0;
     text-align: center;
     margin-top: -1vh;
     z-index: 1;
+    border: 3px solid #ffffff;
 }
 
 .header_button{
     vertical-align: middle;
-    border-color: rgba(0, 0, 0, 0.596);
-    color: rgb(20, 21, 32);
+    border: 2px solid #ffffff; 
+    color: rgb(255, 255, 255);
+    background-color: #000000;
     margin-top: 0.5vh;
     width: fit-content;
     height: fit-content;
