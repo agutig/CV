@@ -20,7 +20,7 @@ function close_div(id){
         for (let step = 0; step < subinfo.length; step++) {
             subinfo[step].style.transition = "transition: max-height 1s";
             subinfo[step].style.height = "fit-content";
-            subinfo[step].style.maxHeight = "100vh";
+            subinfo[step].style.maxHeight = "110vh";
             
             
         }
